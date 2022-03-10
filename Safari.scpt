@@ -11,13 +11,6 @@ tell application "Safari"
 	
 	tell window 1 to set current tab to (make new tab with properties {URL:"https://www.youtube.com/playlist?list=PLxpmxAHpgayoPH-n-LyUys7CCLKedkqcy"})
 	
-	tell application "System Events"
-		keystroke "6" using {option down, control down}
-		delay 0.25
-		keystroke "m" using {option down, control down}
-		delay 0.25
-	end tell
-	
 	delay 2
 	
 	do JavaScript "document.querySelector('[aria-label=\"Shuffle play\"]').click();" in document 1
